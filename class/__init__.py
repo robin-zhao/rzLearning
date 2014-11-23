@@ -4,7 +4,3 @@
 #
 # @description 
 #
-
-from Bird import Bird
-b = Bird("red")
-b.speak()
