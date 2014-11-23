@@ -4,3 +4,12 @@
 #
 # @description 
 #
+
+d = {"toto":1, "tata": 2}
+
+print(d["toto"])
+
+
+for i in d:
+    print(i, d[i])
+
