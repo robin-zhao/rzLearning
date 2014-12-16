@@ -1,19 +1,20 @@
 // global namespace
-var rz = rz || {}
+var rz = rz || {};
 
 // sub namespace
-rz.sub = {}
+rz.sub = {};
 
 rz.custom = {
-  name: "",
-  value: "",
-  speak: function(){
-    console.log(this.name)
-    console.log(this.value)
-  }
-}
+    name: "",
+    value: "",
+    speak: function () {
+        "use strict";
+        console.log(this.name);
+        console.log(this.value);
+    }
+};
 
-rz.custom.name = "hello"
-rz.custom.value = "world"
-rz.custom.speak()
+rz.custom.name = "hello";
+rz.custom.value = "world";
+rz.custom.speak();
 
