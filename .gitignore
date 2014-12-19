@@ -2,5 +2,6 @@ __pycache__/
 .buildpath
 .project
 .swp
+node_modules/
 
 
