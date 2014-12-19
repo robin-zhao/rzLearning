@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script>
+(function(){
+
+  for (var m in _ ) {
+    if(typeof _[m] == 'function') {
+//      console.log(m);
+    }
+  }
+
+   var aArray = [1, 2, 3];
+
+  // each()
+   _.each(aArray, function(v,k,list) {
+    console.log( "each value of list: " + v);
+  });
+
+  // map()
+  var map = _.map(aArray, function(v,k,list) {
+    return v + k;
+  });
+  console.log("mapped list: " + map);
+
+  // reduce()
+
+  // reduceRight()
+
+  // find
+ 
+  // filter
+
+  // where
+
+  // findWhere
+
+  // reject
+
+  // every
+
+  // some
+
+  // contains
+
+  // invoke
+
+  // pluck
+
+  // max
+
+  // min
+
+  // sortBy
+
+  // groupBy
+
+  // indexBy
+
+  // countBy
+
+  // shuffle
+
+  // sample
+
+  // toArray
+
+  // size
+
+  // partition
+  
+
+})();
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
