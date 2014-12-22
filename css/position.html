@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+
+#position-wrapper{
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  top: 100px;
+  left: 100px;
+  position: relative;
+}
+
+.d{
+  height: 100px;
+  width: 100px;
+}
+
+/**
+ * relative to the next parent element with relative (or absolute) positioning.
+ *
+ * absolute elements are removed from flow.
+ */
+.position-absolute {
+  position: absolute;
+  border: 1px solid red;
+  top: 50px;
+  left: 50px;
+}
+.position-absolute2{
+  top: 150px;
+  left: 150px;
+}
+
+.position-relative {
+  position: relative;
+  border: 1px solid blue;
+  left: 50px;
+}
+/*
+ * fixed position is relative to the browser.
+ */
+.position-fixed {
+  position: fixed;
+  border: 1px solid yellow;
+  left: 200px;
+  top: 200px;
+}
+/**
+ * top, left not working for static postion.
+ */
+.position-static {
+  border: 1px solid green;
+  left: 1000px;
+  top: 1000px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="position-wrapper">
+  
+  <div class="d position-static">static 1</div>
+  <div class="d position-static">static 2</div>
+  <div class="d position-absolute">absolute 1</div>
+  <div class="d position-absolute position-absolute2">absolute 2</div>
+  <div class="d position-relative" style="top: -50px;">relative 1</div>
+  <div class="d position-relative">relative 2</div>
+  <div class="d position-relative" style="top: 50px">relative 3</div>
+  <div class="d position-fixed">fixed 1</div>
+
+</div>
+
+</body>
+</html>
