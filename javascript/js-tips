@@ -1,0 +1,7 @@
+1) asynchronous loading ( lazy loading ) 
+
+   - require.js
+   - create script tag
+   - html async attribute
+
+   - other techniquest like load file at bottom of page for non-blocking experience.
