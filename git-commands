@@ -1,0 +1,13 @@
+Deletted junk but not pushed
+
+    > git reset --soft HEAD~1
+
+  - already pushed
+
+    > git revert HEAD
+
+
+git merge --abort
+
+#remove merged branches.
+git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
