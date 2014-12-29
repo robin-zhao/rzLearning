@@ -1,0 +1,4 @@
+uploads/images/*.jpg
+uploads/thumbs/*.jpg
+/nbproject/private/
+node_modules/
