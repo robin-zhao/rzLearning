@@ -1,4 +1,11 @@
 <?php
+
+/**
+  
+   The concrete factory creates the object.
+
+*/
+
 abstract class Creator
 {
     abstract public function factory();

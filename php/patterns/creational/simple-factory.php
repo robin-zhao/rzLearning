@@ -1,4 +1,9 @@
 <?php
+/**
+
+   The factory create objects directly.
+
+*/
 
 class Factory
 {

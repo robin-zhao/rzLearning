@@ -1,4 +1,17 @@
 <?php
+/**
+
+   Create a family of related objects.
+
+
+- A Simple factory is normally called by the client via a static method, and returns one of several objects that all inherit/implement the same parent.
+
+- The Factory Method design is really all about a “create” method that is implemented by sub classes.
+
+- Abstract Factory design is about returning a family of related objects to the client.  It normally uses the Factory Method to create the objects.
+
+
+*/
 
 abstract class RestrauntFactory
 {
@@ -85,8 +98,5 @@ $breakfast = $factory->createBreakfast();
 $lunch = $factory->createLunch();
 var_dump($breakfast->taste());
 var_dump($lunch->cost());
-
-
-
 
 
