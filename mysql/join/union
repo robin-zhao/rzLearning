@@ -1,0 +1,24 @@
+mysql> select * from product;
++----+-------------+---------------------+
+| id | category_id | name                |
++----+-------------+---------------------+
+|  1 |           1 | mouse               |
+|  2 |           1 | keyboard            |
+|  3 |           2 | coke                |
+|  4 |           2 | snack               |
+|  5 |           2 | tea                 |
+|  6 |           3 | high performace ... |
++----+-------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from product where id < 4 union select * from product where id between 2 and 5;
++----+-------------+----------+
+| id | category_id | name     |
++----+-------------+----------+
+|  1 |           1 | mouse    |
+|  2 |           1 | keyboard |
+|  3 |           2 | coke     |
+|  4 |           2 | snack    |
+|  5 |           2 | tea      |
++----+-------------+----------+
+5 rows in set (0.00 sec)

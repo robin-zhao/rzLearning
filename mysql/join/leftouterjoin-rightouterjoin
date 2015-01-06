@@ -1,0 +1,27 @@
+mysql> select p.*, c.* from product p left join category c using (category_id);
++----+-------------+---------------------+-------------+---------------+
+| id | category_id | name                | category_id | category_name |
++----+-------------+---------------------+-------------+---------------+
+|  1 |           1 | mouse               |           1 | hardware      |
+|  2 |           1 | keyboard            |           1 | hardware      |
+|  3 |           2 | coke                |           2 | food          |
+|  4 |           2 | snack               |           2 | food          |
+|  5 |           2 | tea                 |           2 | food          |
+|  6 |           3 | high performace ... |        NULL | NULL          |
++----+-------------+---------------------+-------------+---------------+
+6 rows in set (0.00 sec)
+
+mysql> select p.*, c.* from product p right join category c using (category_id); 
++------+-------------+----------+-------------+---------------+
+| id   | category_id | name     | category_id | category_name |
++------+-------------+----------+-------------+---------------+
+|    1 |           1 | mouse    |           1 | hardware      |
+|    2 |           1 | keyboard |           1 | hardware      |
+|    3 |           2 | coke     |           2 | food          |
+|    4 |           2 | snack    |           2 | food          |
+|    5 |           2 | tea      |           2 | food          |
+| NULL |        NULL | NULL     |           4 | pet           |
+| NULL |        NULL | NULL     |           5 | car           |
++------+-------------+----------+-------------+---------------+
+7 rows in set (0.00 sec)
+

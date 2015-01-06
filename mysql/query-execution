@@ -1,0 +1,12 @@
+1. The client sends the SQL statement to the server.
+
+2. The server checks the query cache. If there’s a hit, it returns the stored result from
+the cache; otherwise, it passes the SQL statement to the next step.
+
+3. The server parses, preprocesses, and optimizes the SQL into a query execution
+plan.
+
+4. The query execution engine executes the plan by making calls to the storage engine
+API.
+
+5. The server sends the result to the client.

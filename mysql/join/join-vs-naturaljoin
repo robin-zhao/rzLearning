@@ -1,0 +1,54 @@
+mysql> select p.*, c.* from product p join category c;
++----+-------------+---------------------+-------------+---------------+
+| id | category_id | name                | category_id | category_name |
++----+-------------+---------------------+-------------+---------------+
+|  1 |           1 | mouse               |           1 | hardware      |
+|  1 |           1 | mouse               |           2 | food          |
+|  1 |           1 | mouse               |           4 | pet           |
+|  1 |           1 | mouse               |           5 | car           |
+|  2 |           1 | keyboard            |           1 | hardware      |
+|  2 |           1 | keyboard            |           2 | food          |
+|  2 |           1 | keyboard            |           4 | pet           |
+|  2 |           1 | keyboard            |           5 | car           |
+|  3 |           2 | coke                |           1 | hardware      |
+|  3 |           2 | coke                |           2 | food          |
+|  3 |           2 | coke                |           4 | pet           |
+|  3 |           2 | coke                |           5 | car           |
+|  4 |           2 | snack               |           1 | hardware      |
+|  4 |           2 | snack               |           2 | food          |
+|  4 |           2 | snack               |           4 | pet           |
+|  4 |           2 | snack               |           5 | car           |
+|  5 |           2 | tea                 |           1 | hardware      |
+|  5 |           2 | tea                 |           2 | food          |
+|  5 |           2 | tea                 |           4 | pet           |
+|  5 |           2 | tea                 |           5 | car           |
+|  6 |           3 | high performace ... |           1 | hardware      |
+|  6 |           3 | high performace ... |           2 | food          |
+|  6 |           3 | high performace ... |           4 | pet           |
+|  6 |           3 | high performace ... |           5 | car           |
++----+-------------+---------------------+-------------+---------------+
+24 rows in set (0.00 sec)
+
+mysql> select p.*, c.* from product p natural join category c;
++----+-------------+----------+-------------+---------------+
+| id | category_id | name     | category_id | category_name |
++----+-------------+----------+-------------+---------------+
+|  1 |           1 | mouse    |           1 | hardware      |
+|  2 |           1 | keyboard |           1 | hardware      |
+|  3 |           2 | coke     |           2 | food          |
+|  4 |           2 | snack    |           2 | food          |
+|  5 |           2 | tea      |           2 | food          |
++----+-------------+----------+-------------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> select p.*, c.* from product p join category c using (category_id);
++----+-------------+----------+-------------+---------------+
+| id | category_id | name     | category_id | category_name |
++----+-------------+----------+-------------+---------------+
+|  1 |           1 | mouse    |           1 | hardware      |
+|  2 |           1 | keyboard |           1 | hardware      |
+|  3 |           2 | coke     |           2 | food          |
+|  4 |           2 | snack    |           2 | food          |
+|  5 |           2 | tea      |           2 | food          |
++----+-------------+----------+-------------+---------------+
+5 rows in set (0.00 sec)
