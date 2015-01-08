@@ -1,7 +1,7 @@
 __pycache__/
 .buildpath
 .project
-.swp
+*.swp
 node_modules/
 
 
