@@ -1,0 +1,27 @@
+
+// copy db1.table1 into db2
+    create table db1.table1 like db2.table1;
+    insert into db1.table1 select * from db2.table1;
+
+// InnoDB and MYisam
+    InnoDb: transaction, foreign key, row lock
+    MyIaSM: table lock, fulltext search...
+
+// characther set and collation
+
+ A character set is a set of symbols and encodings.
+     show character set;
+ A collation is a set of rules for comparing characters in a character set
+     show collation;
+
+// delete 10 million + un wanted rows solution
+
+    Write script to repeat (with sleep): 
+    delete from table1 where [where clause] order by id limit 1000;
+
+// data type, storage
+ 
+   http://dev.mysql.com/doc/refman/5.0/en/storage-requirements.html
+
+    
+    
