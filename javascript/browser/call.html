@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>call</title>
+    <script>
+    (function() {
+
+        window.username = "robin";
+        window.age= 30;
+
+        var user = {
+            username: "jerry",
+            age: 40,
+        };
+        
+        function hello(status, address) {
+            console.log("Hello " + this.username + ", you are " + this.age);
+            console.log("you are " + status + " and lived in " + address);
+        }
+
+        hello.call(window, "heathy", "pudong");
+
+        console.log("---------------------------");
+
+        hello.call(user, "normal", "beijing");
+        
+    })();
+    </script>
+</head>
+<body>
+</body>
+</html>

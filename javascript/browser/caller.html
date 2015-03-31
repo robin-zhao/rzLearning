@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>call</title>
+    <script>
+    (function() {
+
+        function toto() {
+            console.log(toto.caller);
+        }
+        toto();
+
+
+        function tata() {
+            toto();
+        }
+        tata();
+        
+    })();
+    </script>
+</head>
+<body>
+</body>
+</html>

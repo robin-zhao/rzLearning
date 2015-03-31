@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>call</title>
+    <script>
+    (function() {
+
+       var obj = {name: 'toto',age: 10};
+       document.addEventListener('click', function(){
+            console.log(this.name);
+       }.bind(obj), false);
+       
+       document.addEventListener('click', function(){
+            console.log(this.age);
+       }.bind(obj), false);
+        
+    })();
+    </script>
+</head>
+<body>
+</body>
+</html>
