@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Extend</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            var defaults = {
+                name: "robin",
+                age: "29",
+                hates: ["cooking"],
+                has: {
+                    dog: "white"
+                }
+            };
+            var options = {
+                name: "jerry",
+                age: "14",
+                loves: [
+                    "banana",
+                    "cherry"
+                ],
+                hates: [
+                    "washing"
+                ],
+                has: {
+                    cat: "black"
+                }
+            };
+
+            var settings = $.extend({}, defaults, options);
+
+            var settings2 = $.extend(true, {}, defaults, options);
+
+            console.log(settings);
+
+            console.log(settings2);
+        });
+    })(jQuery);
+    </script>
+</head>
+<body>
+</body>
+</html>
