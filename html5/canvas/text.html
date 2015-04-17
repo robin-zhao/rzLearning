@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>call</title>
+    <script>
+    window.onload = function() {
+        var canvas = document.getElementById("test");
+        var context = canvas.getContext("2d");
+
+        context.font = "2em lucida Grande";
+
+
+        setTimeout(function(){
+          context.fillText("Jian Zhao", 50, 50);
+        }, 1000);
+
+
+    };
+    </script>
+
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+
+<canvas id="test" width="600" height="200"></canvas>
+
+</body>
+</html>
