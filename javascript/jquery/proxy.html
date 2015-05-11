@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Extend</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    (function($) {
+        $(document).ready(function() {
+
+            var func1 = function() {
+                console.log( this );
+            };
+
+            func1();
+
+            var object1 = {
+                foo: "bar"
+            };
+
+            var proxyFunc = $.proxy( func1, object1 );
+
+            proxyFunc();
+
+        });
+    })(jQuery);
+    </script>
+</head>
+<body>
+</body>
+</html>

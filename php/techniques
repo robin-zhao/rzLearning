@@ -1,0 +1,12 @@
+1) 无限级分类表设计
+
+2） SSO
+
+3） prevent duplicate submission.
+
+  http://technoesis.net/prevent-double-form-submission/
+
+   - disable submit button
+   - post / redirect / get pattern
+   - unique token in session
+   - table index constraint
