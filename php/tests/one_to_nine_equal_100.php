@@ -13,17 +13,17 @@
  *
  * 2)
  */
-//$matches = [];
-//
-//foreach (range(1, pow(3, 8)) as $each) {
-//
-//    $string = getString($each);
-//    if (calculateString($string) == 100) {
-//        $matches [] = $string;
-//    }
-//}
-//
-//var_dump($matches);
+$matches = [];
+
+foreach (range(0, pow(3, 8) - 1) as $each) {
+
+    $string = getString($each);
+    if (calculateString($string) == 100) {
+        $matches [] = $string;
+    }
+}
+
+var_dump($matches);
 
 function getString($dec)
 {
@@ -86,7 +86,21 @@ function getExt($num, $base) {
 
 function calculateString($string)
 {
-    
+    $return = [];
+
+    $adds = explode('+', $string);
+
+    foreach($adds as $each) {
+        $parts = explode('-', $each);
+        $return[] = intval($parts[0]);
+        if (count($parts) > 0) {
+            for($i=1; $i<count($parts); $i++) {
+                $return[] = 0 - intval($parts[$i]);
+            }
+        }
+
+    }
+    return array_sum($return);
 }
 
 function assertEqual($a, $b) {
@@ -124,3 +138,30 @@ assertEqual(getString(1), '12345678+9');
 assertEqual(getString(2), '12345678-9');
 assertEqual(getString(3), '1234567+89');
 assertEqual(getString(6560), '1-2-3-4-5-6-7-8-9');
+
+/*
+ * array(11) {
+  [0] =>
+  string(13) "123+45-67+8-9"
+  [1] =>
+  string(13) "123+4-5+67-89"
+  [2] =>
+  string(12) "123-45-67+89"
+  [3] =>
+  string(15) "123-4-5-6-7+8-9"
+  [4] =>
+  string(15) "12+3+4+5-6-7+89"
+  [5] =>
+  string(15) "12+3-4+5+67+8+9"
+  [6] =>
+  string(15) "12-3-4+5-6+7+89"
+  [7] =>
+  string(15) "1+23-4+56+7+8+9"
+  [8] =>
+  string(15) "1+23-4+5+6+78-9"
+  [9] =>
+  string(15) "1+2+34-5+67-8+9"
+  [10] =>
+  string(16) "1+2+3-4+5+6+78+9"
+}
+ */
