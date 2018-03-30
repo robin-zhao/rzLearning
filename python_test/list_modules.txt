@@ -1,0 +1,7 @@
+'''
+Run command
+    $ pydoc -p 12345
+
+Then visit: http://localhost:12345/
+
+'''

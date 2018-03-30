@@ -3,6 +3,9 @@ __pycache__/
 .project
 *.swp
 node_modules/
-
-
 /nbproject
+.metadata
+python_test/*.jpg
+python_test/*.txt
+python_test/*.html
+.pydevproject
