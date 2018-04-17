@@ -13,8 +13,12 @@ and open the template in the editor.
     </head>
     <body>
         <div id="app">
-            {{ message }}
+            <span> {{ message }}</span>
+            
+            <span v-once>{{ message }}</span>
         </div>
+        
+        
 
         <div id="app-2">
             <span v-bind:title="message">
@@ -61,6 +65,8 @@ and open the template in the editor.
                 </todo-item>
             </ol>
         </div>
+        
+        
 
         <script>
 
